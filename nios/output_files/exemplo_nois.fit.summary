@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Jun  3 10:37:56 2026
+Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : exemplo_nois
+Top-level Entity Name : exemplo_nios
+Family : Cyclone II
+Device : EP2C35F672C6
+Timing Models : Final
+Total logic elements : 1,667 / 33,216 ( 5 % )
+    Total combinational functions : 1,564 / 33,216 ( 5 % )
+    Dedicated logic registers : 919 / 33,216 ( 3 % )
+Total registers : 919
+Total pins : 13 / 475 ( 3 % )
+Total virtual pins : 0
+Total memory bits : 171,264 / 483,840 ( 35 % )
+Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
