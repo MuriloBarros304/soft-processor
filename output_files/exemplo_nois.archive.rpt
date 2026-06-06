@@ -1,0 +1,131 @@
+Archive Project report for exemplo_nois
+Sat Jun  6 14:04:15 2026
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Sat Jun  6 14:04:15 2026 ;
+; Revision Name          ; exemplo_nois                          ;
+; Top-level Entity Name  ; soft_nios                             ;
+; Family                 ; Cyclone II                            ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive '/home/murilo/Desktop/projetos/soft-processor/soft_processor.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'exemplo_nois.archive.rpt'
+Info (23030): Evaluation of Tcl script /home/murilo/Desktop/quartus/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus II 32-bit Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 282 megabytes
+    Info: Processing ended: Sat Jun  6 14:04:15 2026
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++-------------------------------------------------------------------------------+
+; Files Archived                                                                ;
++-------------------------------------------------------------------------------+
+; File Name                                                                     ;
++-------------------------------------------------------------------------------+
+; assignment_defaults.qdf                                                       ;
+; exemplo_nios.vhd                                                              ;
+; exemplo_nois.qsf                                                              ;
+; incremental_db/compiled_partitions/exemplo_nois.db_info                       ;
+; nios_ii/synthesis/../../nios_ii.cmp                                           ;
+; nios_ii/synthesis/../../nios_ii.qsys                                          ;
+; nios_ii/synthesis/../../nios_ii.sopcinfo                                      ;
+; nios_ii/synthesis/nios_ii.qip                                                 ;
+; nios_ii/synthesis/nios_ii.vhd                                                 ;
+; nios_ii/synthesis/nios_ii_jtag_uart_0_avalon_jtag_slave_translator.vhd        ;
+; nios_ii/synthesis/nios_ii_leds_s1_translator.vhd                              ;
+; nios_ii/synthesis/nios_ii_nios2_qsys_0_data_master_translator.vhd             ;
+; nios_ii/synthesis/nios_ii_nios2_qsys_0_instruction_master_translator.vhd      ;
+; nios_ii/synthesis/nios_ii_nios2_qsys_0_jtag_debug_module_translator.vhd       ;
+; nios_ii/synthesis/nios_ii_onchip_memory2_0_s1_translator.vhd                  ;
+; nios_ii/synthesis/nios_ii_rst_controller.vhd                                  ;
+; nios_ii/synthesis/nios_ii_rst_controller_001.vhd                              ;
+; nios_ii/synthesis/nios_ii_switches_s1_translator.vhd                          ;
+; nios_ii/synthesis/nios_ii_sysid_qsys_0_control_slave_translator.vhd           ;
+; nios_ii/synthesis/submodules/altera_avalon_sc_fifo.v                          ;
+; nios_ii/synthesis/submodules/altera_merlin_arbitrator.sv                      ;
+; nios_ii/synthesis/submodules/altera_merlin_burst_uncompressor.sv              ;
+; nios_ii/synthesis/submodules/altera_merlin_master_agent.sv                    ;
+; nios_ii/synthesis/submodules/altera_merlin_master_translator.sv               ;
+; nios_ii/synthesis/submodules/altera_merlin_slave_agent.sv                     ;
+; nios_ii/synthesis/submodules/altera_merlin_slave_translator.sv                ;
+; nios_ii/synthesis/submodules/altera_reset_controller.sdc                      ;
+; nios_ii/synthesis/submodules/altera_reset_controller.v                        ;
+; nios_ii/synthesis/submodules/altera_reset_synchronizer.v                      ;
+; nios_ii/synthesis/submodules/nios_ii_addr_router.sv                           ;
+; nios_ii/synthesis/submodules/nios_ii_addr_router_001.sv                       ;
+; nios_ii/synthesis/submodules/nios_ii_cmd_xbar_demux.sv                        ;
+; nios_ii/synthesis/submodules/nios_ii_cmd_xbar_demux_001.sv                    ;
+; nios_ii/synthesis/submodules/nios_ii_cmd_xbar_mux.sv                          ;
+; nios_ii/synthesis/submodules/nios_ii_hex7.v                                   ;
+; nios_ii/synthesis/submodules/nios_ii_id_router.sv                             ;
+; nios_ii/synthesis/submodules/nios_ii_id_router_002.sv                         ;
+; nios_ii/synthesis/submodules/nios_ii_irq_mapper.sv                            ;
+; nios_ii/synthesis/submodules/nios_ii_jtag_uart_0.v                            ;
+; nios_ii/synthesis/submodules/nios_ii_leds.v                                   ;
+; nios_ii/synthesis/submodules/nios_ii_nios2_qsys_0.sdc                         ;
+; nios_ii/synthesis/submodules/nios_ii_nios2_qsys_0.v                           ;
+; nios_ii/synthesis/submodules/nios_ii_nios2_qsys_0_jtag_debug_module_sysclk.v  ;
+; nios_ii/synthesis/submodules/nios_ii_nios2_qsys_0_jtag_debug_module_tck.v     ;
+; nios_ii/synthesis/submodules/nios_ii_nios2_qsys_0_jtag_debug_module_wrapper.v ;
+; nios_ii/synthesis/submodules/nios_ii_nios2_qsys_0_oci_test_bench.v            ;
+; nios_ii/synthesis/submodules/nios_ii_nios2_qsys_0_ociram_default_contents.mif ;
+; nios_ii/synthesis/submodules/nios_ii_nios2_qsys_0_rf_ram_a.mif                ;
+; nios_ii/synthesis/submodules/nios_ii_nios2_qsys_0_rf_ram_b.mif                ;
+; nios_ii/synthesis/submodules/nios_ii_nios2_qsys_0_test_bench.v                ;
+; nios_ii/synthesis/submodules/nios_ii_onchip_memory2_0.hex                     ;
+; nios_ii/synthesis/submodules/nios_ii_onchip_memory2_0.v                       ;
+; nios_ii/synthesis/submodules/nios_ii_rsp_xbar_demux_002.sv                    ;
+; nios_ii/synthesis/submodules/nios_ii_rsp_xbar_mux.sv                          ;
+; nios_ii/synthesis/submodules/nios_ii_rsp_xbar_mux_001.sv                      ;
+; nios_ii/synthesis/submodules/nios_ii_switches.v                               ;
+; nios_ii/synthesis/submodules/nios_ii_sysid_qsys_0.v                           ;
+; soft_nios.vhd                                                                 ;
+; soft_processor.qpf                                                            ;
++-------------------------------------------------------------------------------+
+
+
