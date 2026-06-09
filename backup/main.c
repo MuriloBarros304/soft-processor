@@ -1,6 +1,6 @@
 #include "sys/alt_stdio.h"
-#include "system.h"             // Contains base addresses (e.g., SWITCHES_BASE, HEX0_BASE)
-#include "altera_avalon_pio_regs.h" // Contains IORD and IOWR macros
+#include "system.h"
+#include "altera_avalon_pio_regs.h"
 #include <stdint.h>
 
 // ---------------------------------------------------------
@@ -35,46 +35,59 @@ void read_inputs(uint8_t *operand_a, uint8_t *operand_b) {
     // capturing the state of all 16 switches at once.
     uint32_t switch_data = IORD_ALTERA_AVALON_PIO_DATA(SWITCHES_BASE);
 
-    *operand_a = switch_data & 0x0F;
+    *operand_a = switch_data & 0xFF;
 
-    *operand_b = (switch_data >> 8) & 0x0F;
+    *operand_b = (switch_data >> 8) & 0xFF;
 }
 
 // ---------------------------------------------------------
 // 2. PROCESSING MODULE (ALU)
 // ---------------------------------------------------------
-uint8_t calculate_sum(uint8_t a, uint8_t b) {
+uint16_t calculate_sum(uint8_t a, uint8_t b) {
     return a + b;
 }
 
 // ---------------------------------------------------------
 // 3. OUTPUT MODULE (DISPLAY)
 // ---------------------------------------------------------
-void update_display(uint8_t sum_result) {
-    // Hardware limitation check: 
-    // A single display can't show numbers greater than 15.
-    if (sum_result > 512) {
-        // If overflow occurs, force the display to show an error state (e.g., all dashes or the letter 'E')
-        IOWR_ALTERA_AVALON_PIO_DATA(HEX0_BASE, 0x06); // 0x06 is the Active-Low code for 'E'
-    } else {
-        IOWR_ALTERA_AVALON_PIO_DATA(HEX0_BASE, hex7_map[sum_result]);
-    }
+void update_display(uint8_t val_a, uint8_t val_b, uint16_t sum_result) {
+    // A
+    uint8_t a_low = val_a & 0x0F;
+    uint8_t a_high = (val_a >> 4) & 0x0F;
+    
+    IOWR_ALTERA_AVALON_PIO_DATA(HEX6_BASE, hex7_map[a_low]);
+    IOWR_ALTERA_AVALON_PIO_DATA(HEX7_BASE, hex7_map[a_high]);
+
+    // B
+    uint8_t b_low = val_b & 0x0F;
+    uint8_t b_high = (val_b >> 4) & 0x0F;
+    
+    IOWR_ALTERA_AVALON_PIO_DATA(HEX4_BASE, hex7_map[b_low]);
+    IOWR_ALTERA_AVALON_PIO_DATA(HEX5_BASE, hex7_map[b_high]);
+
+    uint8_t res_low = sum_result & 0x0F;
+    uint8_t res_mid = (sum_result >> 4) & 0x0F;
+    uint8_t res_high = (sum_result >> 8) & 0x0F;
+
+    IOWR_ALTERA_AVALON_PIO_DATA(HEX0_BASE, hex7_map[res_low]);
+    IOWR_ALTERA_AVALON_PIO_DATA(HEX1_BASE, hex7_map[res_mid]);
+    IOWR_ALTERA_AVALON_PIO_DATA(HEX2_BASE, hex7_map[res_high]);
 }
 
 // ---------------------------------------------------------
 // 4. MAIN LOOP
 // ---------------------------------------------------------
-int main() { 
+int main() {
     uint8_t val_a = 0;
     uint8_t val_b = 0;
-    uint8_t result = 0;
+    uint16_t result = 0;
 
     alt_putstr("Adder System Started!\n");
 
     while (1) {
         read_inputs(&val_a, &val_b);
         result = calculate_sum(val_a, val_b);
-        update_display(result);
+        update_display(val_a, val_b, result);
     }
 
     return 0;

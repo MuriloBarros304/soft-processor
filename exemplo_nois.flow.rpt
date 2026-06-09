@@ -1,5 +1,5 @@
 Flow report for exemplo_nois
-Tue Jun  9 12:45:59 2026
+Tue Jun  9 16:08:41 2026
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,20 +40,22 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Flow Failed - Tue Jun  9 12:45:59 2026          ;
+; Flow Status                        ; Successful - Tue Jun  9 16:08:37 2026           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; exemplo_nois                                    ;
 ; Top-level Entity Name              ; soft_nios                                       ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; N/A until Partition Merge                       ;
-;     Total combinational functions  ; N/A until Partition Merge                       ;
-;     Dedicated logic registers      ; N/A until Partition Merge                       ;
-; Total registers                    ; N/A until Partition Merge                       ;
-; Total pins                         ; N/A until Partition Merge                       ;
-; Total virtual pins                 ; N/A until Partition Merge                       ;
-; Total memory bits                  ; N/A until Partition Merge                       ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
-; Total PLLs                         ; N/A until Partition Merge                       ;
+; Total logic elements               ; 1,970 / 14,448 ( 14 % )                         ;
+;     Total combinational functions  ; 1,818 / 14,448 ( 13 % )                         ;
+;     Dedicated logic registers      ; 1,106 / 14,448 ( 8 % )                          ;
+; Total registers                    ; 1106                                            ;
+; Total pins                         ; 78 / 152 ( 51 % )                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 171,264 / 239,616 ( 71 % )                      ;
+; Embedded Multiplier 9-bit elements ; 0 / 52 ( 0 % )                                  ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
+; Device                             ; EP2C15AF256C6                                   ;
+; Timing Models                      ; Final                                           ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -62,48 +64,137 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/09/2026 12:45:58 ;
+; Start date & time ; 06/09/2026 16:07:35 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; exemplo_nois        ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                       ;
-+-------------------------------------+-----------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                 ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+-----------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 0.178101995804820     ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; 16764057              ; --            ; soft_nios   ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING ; --            ; soft_nios   ; Top        ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                ; --            ; soft_nios   ; Top        ;
-; TOP_LEVEL_ENTITY                    ; soft_nios             ; exemplo_nois  ; --          ; --         ;
-+-------------------------------------+-----------------------+---------------+-------------+------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                               ;
++-------------------------------------+-----------------------------------------------------------+---------------+---------------------------------+------------+
+; Assignment Name                     ; Value                                                     ; Default Value ; Entity Name                     ; Section Id ;
++-------------------------------------+-----------------------------------------------------------+---------------+---------------------------------+------------+
+; COMPILER_SIGNATURE_ID               ; 0.178103205509630                                         ; --            ; --                              ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; altera_avalon_sc_fifo           ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; altera_merlin_master_agent      ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; altera_merlin_master_translator ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; altera_merlin_slave_agent       ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; altera_merlin_slave_translator  ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; altera_reset_controller         ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii                         ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_addr_router             ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_addr_router_001         ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_cmd_xbar_demux          ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_cmd_xbar_demux_001      ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_cmd_xbar_mux            ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_hex0                    ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_id_router               ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_id_router_002           ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_irq_mapper              ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_jtag_uart_0             ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_leds                    ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_nios2_qsys_0            ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_onchip_memory2_0        ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_rsp_xbar_demux_002      ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_rsp_xbar_mux            ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_rsp_xbar_mux_001        ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_switches                ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_sysid_qsys_0            ; --         ;
+; IP_TOOL_NAME                        ; altera_avalon_sc_fifo                                     ; --            ; altera_avalon_sc_fifo           ; --         ;
+; IP_TOOL_NAME                        ; altera_merlin_master_agent                                ; --            ; altera_merlin_master_agent      ; --         ;
+; IP_TOOL_NAME                        ; altera_merlin_master_translator                           ; --            ; altera_merlin_master_translator ; --         ;
+; IP_TOOL_NAME                        ; altera_merlin_slave_agent                                 ; --            ; altera_merlin_slave_agent       ; --         ;
+; IP_TOOL_NAME                        ; altera_merlin_slave_translator                            ; --            ; altera_merlin_slave_translator  ; --         ;
+; IP_TOOL_NAME                        ; altera_reset_controller                                   ; --            ; altera_reset_controller         ; --         ;
+; IP_TOOL_NAME                        ; Qsys                                                      ; --            ; nios_ii                         ; --         ;
+; IP_TOOL_NAME                        ; altera_merlin_router                                      ; --            ; nios_ii_addr_router             ; --         ;
+; IP_TOOL_NAME                        ; altera_merlin_router                                      ; --            ; nios_ii_addr_router_001         ; --         ;
+; IP_TOOL_NAME                        ; altera_merlin_demultiplexer                               ; --            ; nios_ii_cmd_xbar_demux          ; --         ;
+; IP_TOOL_NAME                        ; altera_merlin_demultiplexer                               ; --            ; nios_ii_cmd_xbar_demux_001      ; --         ;
+; IP_TOOL_NAME                        ; altera_merlin_multiplexer                                 ; --            ; nios_ii_cmd_xbar_mux            ; --         ;
+; IP_TOOL_NAME                        ; altera_avalon_pio                                         ; --            ; nios_ii_hex0                    ; --         ;
+; IP_TOOL_NAME                        ; altera_merlin_router                                      ; --            ; nios_ii_id_router               ; --         ;
+; IP_TOOL_NAME                        ; altera_merlin_router                                      ; --            ; nios_ii_id_router_002           ; --         ;
+; IP_TOOL_NAME                        ; altera_irq_mapper                                         ; --            ; nios_ii_irq_mapper              ; --         ;
+; IP_TOOL_NAME                        ; altera_avalon_jtag_uart                                   ; --            ; nios_ii_jtag_uart_0             ; --         ;
+; IP_TOOL_NAME                        ; altera_avalon_pio                                         ; --            ; nios_ii_leds                    ; --         ;
+; IP_TOOL_NAME                        ; altera_nios2_qsys                                         ; --            ; nios_ii_nios2_qsys_0            ; --         ;
+; IP_TOOL_NAME                        ; altera_avalon_onchip_memory2                              ; --            ; nios_ii_onchip_memory2_0        ; --         ;
+; IP_TOOL_NAME                        ; altera_merlin_demultiplexer                               ; --            ; nios_ii_rsp_xbar_demux_002      ; --         ;
+; IP_TOOL_NAME                        ; altera_merlin_multiplexer                                 ; --            ; nios_ii_rsp_xbar_mux            ; --         ;
+; IP_TOOL_NAME                        ; altera_merlin_multiplexer                                 ; --            ; nios_ii_rsp_xbar_mux_001        ; --         ;
+; IP_TOOL_NAME                        ; altera_avalon_pio                                         ; --            ; nios_ii_switches                ; --         ;
+; IP_TOOL_NAME                        ; altera_avalon_sysid_qsys                                  ; --            ; nios_ii_sysid_qsys_0            ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; altera_avalon_sc_fifo           ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; altera_merlin_master_agent      ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; altera_merlin_master_translator ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; altera_merlin_slave_agent       ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; altera_merlin_slave_translator  ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; altera_reset_controller         ; --         ;
+; IP_TOOL_VERSION                     ; 13.0sp1                                                   ; --            ; nios_ii                         ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; nios_ii_addr_router             ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; nios_ii_addr_router_001         ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; nios_ii_cmd_xbar_demux          ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; nios_ii_cmd_xbar_demux_001      ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; nios_ii_cmd_xbar_mux            ; --         ;
+; IP_TOOL_VERSION                     ; 13.0.1.99.2                                               ; --            ; nios_ii_hex0                    ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; nios_ii_id_router               ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; nios_ii_id_router_002           ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; nios_ii_irq_mapper              ; --         ;
+; IP_TOOL_VERSION                     ; 13.0.1.99.2                                               ; --            ; nios_ii_jtag_uart_0             ; --         ;
+; IP_TOOL_VERSION                     ; 13.0.1.99.2                                               ; --            ; nios_ii_leds                    ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; nios_ii_nios2_qsys_0            ; --         ;
+; IP_TOOL_VERSION                     ; 13.0.1.99.2                                               ; --            ; nios_ii_onchip_memory2_0        ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; nios_ii_rsp_xbar_demux_002      ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; nios_ii_rsp_xbar_mux            ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; nios_ii_rsp_xbar_mux_001        ; --         ;
+; IP_TOOL_VERSION                     ; 13.0.1.99.2                                               ; --            ; nios_ii_switches                ; --         ;
+; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; nios_ii_sysid_qsys_0            ; --         ;
+; MISC_FILE                           ; nios_ii/synthesis/../../nios_ii.cmp                       ; --            ; --                              ; --         ;
+; MISC_FILE                           ; nios_ii/synthesis/../../nios_ii.qsys                      ; --            ; --                              ; --         ;
+; PARTITION_COLOR                     ; 16764057                                                  ; --            ; soft_nios                       ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                     ; --            ; soft_nios                       ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                    ; --            ; soft_nios                       ; Top        ;
+; SLD_INFO                            ; QSYS_NAME nios_ii HAS_SOPCINFO 1 GENERATION_ID 1781019898 ; --            ; nios_ii                         ; --         ;
+; SOPCINFO_FILE                       ; nios_ii/synthesis/../../nios_ii.sopcinfo                  ; --            ; --                              ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                        ; --            ; --                              ; --         ;
+; TOP_LEVEL_ENTITY                    ; soft_nios                                                 ; exemplo_nois  ; --                              ; --         ;
++-------------------------------------+-----------------------------------------------------------+---------------+---------------------------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:01     ; 1.0                     ; 355 MB              ; 00:00:01                           ;
-; Total                ; 00:00:01     ; --                      ; --                  ; 00:00:01                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:25     ; 1.0                     ; 431 MB              ; 00:00:21                           ;
+; Fitter                    ; 00:00:24     ; 1.0                     ; 460 MB              ; 00:00:19                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 345 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 323 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:54     ; --                      ; --                  ; 00:00:44                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                          ;
-+----------------------+------------------+------------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name          ; OS Version ; Processor type ;
-+----------------------+------------------+------------------+------------+----------------+
-; Analysis & Synthesis ; cerberus         ; Debian GNU/Linux ; 13         ; x86_64         ;
-+----------------------+------------------+------------------+------------+----------------+
++-----------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                               ;
++---------------------------+------------------+------------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name          ; OS Version ; Processor type ;
++---------------------------+------------------+------------------+------------+----------------+
+; Analysis & Synthesis      ; cerberus         ; Debian GNU/Linux ; 13         ; x86_64         ;
+; Fitter                    ; cerberus         ; Debian GNU/Linux ; 13         ; x86_64         ;
+; Assembler                 ; cerberus         ; Debian GNU/Linux ; 13         ; x86_64         ;
+; TimeQuest Timing Analyzer ; cerberus         ; Debian GNU/Linux ; 13         ; x86_64         ;
++---------------------------+------------------+------------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off soft_processor -c exemplo_nois
+quartus_fit --read_settings_files=off --write_settings_files=off soft_processor -c exemplo_nois
+quartus_asm --read_settings_files=off --write_settings_files=off soft_processor -c exemplo_nois
+quartus_sta soft_processor -c exemplo_nois
 
 
 
