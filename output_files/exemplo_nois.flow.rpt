@@ -1,5 +1,5 @@
 Flow report for exemplo_nois
-Sat Jun  6 13:32:56 2026
+Mon Jun 08 11:36:57 2026
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,22 +40,22 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sat Jun  6 13:32:56 2026           ;
+; Flow Status                        ; Successful - Mon Jun 08 11:36:56 2026           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; exemplo_nois                                    ;
 ; Top-level Entity Name              ; soft_nios                                       ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 1,844                                           ;
-;     Total combinational functions  ; 1,631                                           ;
-;     Dedicated logic registers      ; 984                                             ;
-; Total registers                    ; 984                                             ;
-; Total pins                         ; 38                                              ;
+; Total logic elements               ; 1,820 / 33,216 ( 5 % )                          ;
+;     Total combinational functions  ; 1,697 / 33,216 ( 5 % )                          ;
+;     Dedicated logic registers      ; 1,026 / 33,216 ( 3 % )                          ;
+; Total registers                    ; 1026                                            ;
+; Total pins                         ; 52 / 475 ( 11 % )                               ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 171,264                                         ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total PLLs                         ; 0                                               ;
+; Total memory bits                  ; 171,264 / 483,840 ( 35 % )                      ;
+; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                  ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/06/2026 13:32:47 ;
+; Start date & time ; 06/08/2026 11:36:41 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; exemplo_nois        ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+-----------------------------------------------------------+---------------+---------------------------------+------------+
 ; Assignment Name                     ; Value                                                     ; Default Value ; Entity Name                     ; Section Id ;
 +-------------------------------------+-----------------------------------------------------------+---------------+---------------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 0.178076356714097                                         ; --            ; --                              ; --         ;
+; COMPILER_SIGNATURE_ID               ; 114573113241203.178092940106548                           ; --            ; --                              ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; altera_avalon_sc_fifo           ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; altera_merlin_master_agent      ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; altera_merlin_master_translator ; --         ;
@@ -88,7 +88,7 @@ applicable agreement for further details.
 ; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_cmd_xbar_demux          ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_cmd_xbar_demux_001      ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_cmd_xbar_mux            ; --         ;
-; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_hex7                    ; --         ;
+; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_hex0                    ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_id_router               ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_id_router_002           ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                      ; --            ; nios_ii_irq_mapper              ; --         ;
@@ -113,7 +113,7 @@ applicable agreement for further details.
 ; IP_TOOL_NAME                        ; altera_merlin_demultiplexer                               ; --            ; nios_ii_cmd_xbar_demux          ; --         ;
 ; IP_TOOL_NAME                        ; altera_merlin_demultiplexer                               ; --            ; nios_ii_cmd_xbar_demux_001      ; --         ;
 ; IP_TOOL_NAME                        ; altera_merlin_multiplexer                                 ; --            ; nios_ii_cmd_xbar_mux            ; --         ;
-; IP_TOOL_NAME                        ; altera_avalon_pio                                         ; --            ; nios_ii_hex7                    ; --         ;
+; IP_TOOL_NAME                        ; altera_avalon_pio                                         ; --            ; nios_ii_hex0                    ; --         ;
 ; IP_TOOL_NAME                        ; altera_merlin_router                                      ; --            ; nios_ii_id_router               ; --         ;
 ; IP_TOOL_NAME                        ; altera_merlin_router                                      ; --            ; nios_ii_id_router_002           ; --         ;
 ; IP_TOOL_NAME                        ; altera_irq_mapper                                         ; --            ; nios_ii_irq_mapper              ; --         ;
@@ -138,7 +138,7 @@ applicable agreement for further details.
 ; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; nios_ii_cmd_xbar_demux          ; --         ;
 ; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; nios_ii_cmd_xbar_demux_001      ; --         ;
 ; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; nios_ii_cmd_xbar_mux            ; --         ;
-; IP_TOOL_VERSION                     ; 13.0.1.99.2                                               ; --            ; nios_ii_hex7                    ; --         ;
+; IP_TOOL_VERSION                     ; 13.0.1.99.2                                               ; --            ; nios_ii_hex0                    ; --         ;
 ; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; nios_ii_id_router               ; --         ;
 ; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; nios_ii_id_router_002           ; --         ;
 ; IP_TOOL_VERSION                     ; 13.0                                                      ; --            ; nios_ii_irq_mapper              ; --         ;
@@ -163,36 +163,45 @@ applicable agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                              ; --            ; --                              ; --         ;
 ; SEARCH_PATH                         ; nios_ii/synthesis/                                        ; --            ; --                              ; --         ;
 ; SEARCH_PATH                         ; nios_ii/synthesis/submodules/                             ; --            ; --                              ; --         ;
-; SLD_INFO                            ; QSYS_NAME nios_ii HAS_SOPCINFO 1 GENERATION_ID 1780755822 ; --            ; nios_ii                         ; --         ;
+; SLD_INFO                            ; QSYS_NAME nios_ii HAS_SOPCINFO 1 GENERATION_ID 1780927049 ; --            ; nios_ii                         ; --         ;
 ; SOPCINFO_FILE                       ; nios_ii/synthesis/../../nios_ii.sopcinfo                  ; --            ; --                              ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                        ; --            ; --                              ; --         ;
 ; TOP_LEVEL_ENTITY                    ; soft_nios                                                 ; exemplo_nois  ; --                              ; --         ;
 +-------------------------------------+-----------------------------------------------------------+---------------+---------------------------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 419 MB              ; 00:00:09                           ;
-; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:09                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ; 466 MB              ; 00:00:05                           ;
+; Fitter                    ; 00:00:06     ; 1.0                     ; 538 MB              ; 00:00:06                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 386 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 352 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:13     ; --                      ; --                  ; 00:00:13                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                          ;
-+----------------------+------------------+------------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name          ; OS Version ; Processor type ;
-+----------------------+------------------+------------------+------------+----------------+
-; Analysis & Synthesis ; cerberus         ; Debian GNU/Linux ; 13         ; x86_64         ;
-+----------------------+------------------+------------------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; 1418DCA00261D0W  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; 1418DCA00261D0W  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; 1418DCA00261D0W  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; 1418DCA00261D0W  ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off soft_processor -c exemplo_nois
+quartus_fit --read_settings_files=off --write_settings_files=off soft_processor -c exemplo_nois
+quartus_asm --read_settings_files=off --write_settings_files=off soft_processor -c exemplo_nois
+quartus_sta soft_processor -c exemplo_nois
 
 
 

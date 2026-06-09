@@ -1,0 +1,474 @@
+Archive member included because of file (symbol)
+
+../somador_bsp/\libhal_bsp.a(alt_load.o)
+                              ../somador_bsp//obj/HAL/src/crt0.o (alt_load)
+../somador_bsp/\libhal_bsp.a(alt_main.o)
+                              ../somador_bsp//obj/HAL/src/crt0.o (alt_main)
+../somador_bsp/\libhal_bsp.a(alt_putstr.o)
+                              obj/default/hello_world_small.o (alt_putstr)
+../somador_bsp/\libhal_bsp.a(alt_sys_init.o)
+                              ../somador_bsp/\libhal_bsp.a(alt_main.o) (alt_sys_init)
+../somador_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                              ../somador_bsp/\libhal_bsp.a(alt_putstr.o) (altera_avalon_jtag_uart_write)
+../somador_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                              ../somador_bsp/\libhal_bsp.a(alt_load.o) (alt_dcache_flush_all)
+../somador_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                              ../somador_bsp/\libhal_bsp.a(alt_load.o) (alt_icache_flush_all)
+../somador_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+                              ../somador_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_nios2_qsys_irq_init)
+c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+                              ../somador_bsp/\libhal_bsp.a(alt_putstr.o) (strlen)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+reset            0x00008000         0x00000020
+onchip_memory2_0 0x00008020         0x00004e00
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD ../somador_bsp//obj/HAL/src/crt0.o
+                0x0000800c                exit = _exit
+LOAD obj/default/hello_world_small.o
+LOAD c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libstdc++.a
+LOAD c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libm.a
+LOAD c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a
+START GROUP
+LOAD c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a
+LOAD c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a
+LOAD ../somador_bsp/\libhal_bsp.a
+END GROUP
+LOAD c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/mno-hw-mul\libgcc.a
+                0x00008000                __alt_mem_onchip_memory2_0 = 0x8000
+
+.entry          0x00008000       0x20
+ *(.entry)
+ .entry         0x00008000       0x20 ../somador_bsp//obj/HAL/src/crt0.o
+                0x00008000                __reset
+                0x0000800c                _exit
+
+.exceptions     0x00008020        0x0
+                0x00008020                PROVIDE (__ram_exceptions_start, ABSOLUTE (.))
+                0x00008020                . = ALIGN (0x20)
+ *(.irq)
+ *(.exceptions.entry.label)
+ *(.exceptions.entry.user)
+ *(.exceptions.entry)
+ *(.exceptions.irqtest.user)
+ *(.exceptions.irqtest)
+ *(.exceptions.irqhandler.user)
+ *(.exceptions.irqhandler)
+ *(.exceptions.irqreturn.user)
+ *(.exceptions.irqreturn)
+ *(.exceptions.notirq.label)
+ *(.exceptions.notirq.user)
+ *(.exceptions.notirq)
+ *(.exceptions.soft.user)
+ *(.exceptions.soft)
+ *(.exceptions.unknown.user)
+ *(.exceptions.unknown)
+ *(.exceptions.exit.label)
+ *(.exceptions.exit.user)
+ *(.exceptions.exit)
+ *(.exceptions)
+                0x00008020                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
+                0x00008020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
+
+.text           0x00008020      0x25c
+                0x00008020                PROVIDE (stext, ABSOLUTE (.))
+ *(.interp)
+ *(.hash)
+ *(.dynsym)
+ *(.dynstr)
+ *(.gnu.version)
+ *(.gnu.version_d)
+ *(.gnu.version_r)
+ *(.rel.init)
+ *(.rela.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rela.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rela.ctors)
+ *(.rel.dtors)
+ *(.rela.dtors)
+ *(.rel.got)
+ *(.rela.got)
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rel.plt)
+ *(.rela.plt)
+ *(.rel.dyn)
+ *(.init)
+ *(.plt)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x00008020       0x3c ../somador_bsp//obj/HAL/src/crt0.o
+                0x00008020                _start
+ .text          0x0000805c       0xa8 obj/default/hello_world_small.o
+                0x0000805c                calculate_sum
+                0x00008068                update_display
+                0x0000809c                read_inputs
+                0x000080c4                main
+ .text          0x00008104       0x8c ../somador_bsp/\libhal_bsp.a(alt_load.o)
+                0x00008124                alt_load
+ .text          0x00008190       0x2c ../somador_bsp/\libhal_bsp.a(alt_main.o)
+                0x00008190                alt_main
+ .text          0x000081bc       0x38 ../somador_bsp/\libhal_bsp.a(alt_putstr.o)
+                0x000081bc                alt_putstr
+ .text          0x000081f4       0x24 ../somador_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x000081f4                alt_sys_init
+                0x000081f8                alt_irq_init
+ .text          0x00008218       0x34 ../somador_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                0x00008218                altera_avalon_jtag_uart_write
+ .text          0x0000824c        0x4 ../somador_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                0x0000824c                alt_dcache_flush_all
+ .text          0x00008250        0x4 ../somador_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                0x00008250                alt_icache_flush_all
+ .text          0x00008254        0x8 ../somador_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+                0x00008254                altera_nios2_qsys_irq_init
+ .text          0x0000825c       0x20 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+                0x0000825c                strlen
+ *(.gnu.warning.*)
+ *(.fini)
+                0x0000827c                PROVIDE (__etext, ABSOLUTE (.))
+                0x0000827c                PROVIDE (_etext, ABSOLUTE (.))
+                0x0000827c                PROVIDE (etext, ABSOLUTE (.))
+ *(.eh_frame_hdr)
+                0x0000827c                . = ALIGN (0x4)
+                0x0000827c                PROVIDE (__preinit_array_start, ABSOLUTE (.))
+ *(.preinit_array)
+                0x0000827c                PROVIDE (__preinit_array_end, ABSOLUTE (.))
+                0x0000827c                PROVIDE (__init_array_start, ABSOLUTE (.))
+ *(.init_array)
+                0x0000827c                PROVIDE (__init_array_end, ABSOLUTE (.))
+                0x0000827c                PROVIDE (__fini_array_start, ABSOLUTE (.))
+ *(.fini_array)
+                0x0000827c                PROVIDE (__fini_array_end, ABSOLUTE (.))
+ *(.eh_frame)
+ *(.gcc_except_table)
+ *(.dynamic)
+                0x0000827c                PROVIDE (__CTOR_LIST__, ABSOLUTE (.))
+ *(.ctors)
+ *(SORT(.ctors.*))
+                0x0000827c                PROVIDE (__CTOR_END__, ABSOLUTE (.))
+                0x0000827c                PROVIDE (__DTOR_LIST__, ABSOLUTE (.))
+ *(.dtors)
+ *(SORT(.dtors.*))
+                0x0000827c                PROVIDE (__DTOR_END__, ABSOLUTE (.))
+ *(.jcr)
+                0x0000827c                . = ALIGN (0x4)
+
+.rodata         0x0000827c       0x28
+                0x0000827c                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
+                0x0000827c                . = ALIGN (0x4)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.4
+                0x0000827c       0x18 obj/default/hello_world_small.o
+ .rodata        0x00008294       0x10 obj/default/hello_world_small.o
+                0x00008294                hex7_map
+ *(.rodata1)
+                0x000082a4                . = ALIGN (0x4)
+                0x000082a4                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
+                0x0000827c                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+
+.rwdata         0x000082a4        0x4 load address 0x000082a8
+                0x000082a4                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
+                0x000082a4                . = ALIGN (0x4)
+ *(.got.plt)
+ *(.got)
+ *(.data1)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x000082a4        0x0 ../somador_bsp//obj/HAL/src/crt0.o
+ .data          0x000082a4        0x0 obj/default/hello_world_small.o
+ .data          0x000082a4        0x0 ../somador_bsp/\libhal_bsp.a(alt_load.o)
+ .data          0x000082a4        0x0 ../somador_bsp/\libhal_bsp.a(alt_main.o)
+ .data          0x000082a4        0x0 ../somador_bsp/\libhal_bsp.a(alt_putstr.o)
+ .data          0x000082a4        0x0 ../somador_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .data          0x000082a4        0x0 ../somador_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .data          0x000082a4        0x0 ../somador_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x000082a4        0x0 ../somador_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x000082a4        0x0 ../somador_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .data          0x000082a4        0x0 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+                0x000102a4                _gp = ABSOLUTE ((. + 0x8000))
+                0x000102a4                PROVIDE (gp, _gp)
+ *(.rwdata .rwdata.*)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x000082a4        0x4 ../somador_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x000082a4                jtag_uart_0
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0x000082a8                . = ALIGN (0x4)
+                0x000082a8                _edata = ABSOLUTE (.)
+                0x000082a8                PROVIDE (edata, ABSOLUTE (.))
+                0x000082a8                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
+                0x000082a8                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+
+.bss            0x000082ac        0xc
+                0x000082ac                __bss_start = ABSOLUTE (.)
+                0x000082ac                PROVIDE (__sbss_start, ABSOLUTE (.))
+                0x000082ac                PROVIDE (___sbss_start, ABSOLUTE (.))
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss          0x000082ac        0xc ../somador_bsp/\libhal_bsp.a(alt_main.o)
+                0x000082ac                alt_argc
+                0x000082b0                alt_argv
+                0x000082b4                alt_envp
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+ *(.scommon)
+                0x000082b8                PROVIDE (__sbss_end, ABSOLUTE (.))
+                0x000082b8                PROVIDE (___sbss_end, ABSOLUTE (.))
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x000082b8        0x0 ../somador_bsp//obj/HAL/src/crt0.o
+ .bss           0x000082b8        0x0 obj/default/hello_world_small.o
+ .bss           0x000082b8        0x0 ../somador_bsp/\libhal_bsp.a(alt_load.o)
+ .bss           0x000082b8        0x0 ../somador_bsp/\libhal_bsp.a(alt_main.o)
+ .bss           0x000082b8        0x0 ../somador_bsp/\libhal_bsp.a(alt_putstr.o)
+ .bss           0x000082b8        0x0 ../somador_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .bss           0x000082b8        0x0 ../somador_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .bss           0x000082b8        0x0 ../somador_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x000082b8        0x0 ../somador_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x000082b8        0x0 ../somador_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .bss           0x000082b8        0x0 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ *(COMMON)
+                0x000082b8                . = ALIGN (0x4)
+                0x000082b8                __bss_end = ABSOLUTE (.)
+
+.onchip_memory2_0
+                0x000082b8        0x0
+                0x000082b8                PROVIDE (_alt_partition_onchip_memory2_0_start, ABSOLUTE (.))
+ *(.onchip_memory2_0. onchip_memory2_0.*)
+                0x000082b8                . = ALIGN (0x4)
+                0x000082b8                PROVIDE (_alt_partition_onchip_memory2_0_end, ABSOLUTE (.))
+                0x000082b8                _end = ABSOLUTE (.)
+                0x000082b8                end = ABSOLUTE (.)
+                0x000082b8                __alt_stack_base = ABSOLUTE (.)
+                0x000082b8                PROVIDE (_alt_partition_onchip_memory2_0_load_addr, LOADADDR (.onchip_memory2_0))
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x26
+ *(.comment)
+ .comment       0x00000000       0x26 obj/default/hello_world_small.o
+                                 0x27 (size before relaxing)
+ .comment       0x00000000       0x27 ../somador_bsp/\libhal_bsp.a(alt_load.o)
+ .comment       0x00000000       0x27 ../somador_bsp/\libhal_bsp.a(alt_main.o)
+ .comment       0x00000000       0x27 ../somador_bsp/\libhal_bsp.a(alt_putstr.o)
+ .comment       0x00000000       0x27 ../somador_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .comment       0x00000000       0x27 ../somador_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .comment       0x00000000       0x27 ../somador_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .comment       0x00000000       0x27 ../somador_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .comment       0x00000000       0x27 ../somador_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .comment       0x00000000       0x27 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x168
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x28 ../somador_bsp//obj/HAL/src/crt0.o
+ .debug_aranges
+                0x00000028       0x20 obj/default/hello_world_small.o
+ .debug_aranges
+                0x00000048       0x20 ../somador_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_aranges
+                0x00000068       0x20 ../somador_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_aranges
+                0x00000088       0x20 ../somador_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_aranges
+                0x000000a8       0x20 ../somador_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_aranges
+                0x000000c8       0x20 ../somador_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_aranges
+                0x000000e8       0x20 ../somador_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_aranges
+                0x00000108       0x20 ../somador_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_aranges
+                0x00000128       0x20 ../somador_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_aranges
+                0x00000148       0x20 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+
+.debug_pubnames
+                0x00000000      0x1ff
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x5d obj/default/hello_world_small.o
+ .debug_pubnames
+                0x0000005d       0x1f ../somador_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_pubnames
+                0x0000007c       0x46 ../somador_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_pubnames
+                0x000000c2       0x21 ../somador_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_pubnames
+                0x000000e3       0x44 ../somador_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_pubnames
+                0x00000127       0x34 ../somador_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_pubnames
+                0x0000015b       0x2b ../somador_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_pubnames
+                0x00000186       0x2b ../somador_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_pubnames
+                0x000001b1       0x31 ../somador_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_pubnames
+                0x000001e2       0x1d c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+
+.debug_info     0x00000000      0xaae
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000       0x77 ../somador_bsp//obj/HAL/src/crt0.o
+ .debug_info    0x00000077      0x1aa obj/default/hello_world_small.o
+ .debug_info    0x00000221      0x12e ../somador_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_info    0x0000034f      0x125 ../somador_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_info    0x00000474       0xc5 ../somador_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_info    0x00000539      0x17d ../somador_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x000006b6      0x18f ../somador_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_info    0x00000845       0x8d ../somador_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x000008d2       0x8d ../somador_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x0000095f       0x8d ../somador_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_info    0x000009ec       0xc2 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+
+.debug_abbrev   0x00000000      0x5d2
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0x12 ../somador_bsp//obj/HAL/src/crt0.o
+ .debug_abbrev  0x00000012       0xfd obj/default/hello_world_small.o
+ .debug_abbrev  0x0000010f       0x97 ../somador_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_abbrev  0x000001a6       0xa6 ../somador_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x0000024c       0x7c ../somador_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_abbrev  0x000002c8       0xe3 ../somador_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x000003ab       0xf0 ../somador_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_abbrev  0x0000049b       0x3f ../somador_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x000004da       0x3f ../somador_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x00000519       0x3f ../somador_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_abbrev  0x00000558       0x7a c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+
+.debug_line     0x00000000     0x16ad
+ *(.debug_line)
+ .debug_line    0x00000000       0x66 ../somador_bsp//obj/HAL/src/crt0.o
+ .debug_line    0x00000066      0x293 obj/default/hello_world_small.o
+ .debug_line    0x000002f9      0x217 ../somador_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_line    0x00000510      0x2c2 ../somador_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_line    0x000007d2      0x1d9 ../somador_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_line    0x000009ab      0x286 ../somador_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x00000c31      0x2f4 ../somador_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_line    0x00000f25      0x1b5 ../somador_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x000010da      0x1b5 ../somador_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x0000128f      0x1ce ../somador_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_line    0x0000145d      0x250 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+
+.debug_frame    0x00000000      0x1b8
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x58 obj/default/hello_world_small.o
+ .debug_frame   0x00000058       0x38 ../somador_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_frame   0x00000090       0x28 ../somador_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_frame   0x000000b8       0x28 ../somador_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_frame   0x000000e0       0x38 ../somador_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x00000118       0x20 ../somador_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_frame   0x00000138       0x20 ../somador_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_frame   0x00000158       0x20 ../somador_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_frame   0x00000178       0x20 ../somador_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+ .debug_frame   0x00000198       0x20 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+
+.debug_str      0x00000000      0x58b
+ *(.debug_str)
+ .debug_str     0x00000000      0x12c obj/default/hello_world_small.o
+                                0x171 (size before relaxing)
+ .debug_str     0x0000012c      0x137 ../somador_bsp/\libhal_bsp.a(alt_load.o)
+                                0x1cc (size before relaxing)
+ .debug_str     0x00000263       0x75 ../somador_bsp/\libhal_bsp.a(alt_main.o)
+                                0x150 (size before relaxing)
+ .debug_str     0x000002d8       0x4c ../somador_bsp/\libhal_bsp.a(alt_putstr.o)
+                                0x127 (size before relaxing)
+ .debug_str     0x00000324       0x85 ../somador_bsp/\libhal_bsp.a(alt_sys_init.o)
+                                0x1c5 (size before relaxing)
+ .debug_str     0x000003a9       0x56 ../somador_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                                0x1c8 (size before relaxing)
+ .debug_str     0x000003ff       0x34 ../somador_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                                0x10f (size before relaxing)
+ .debug_str     0x00000433       0x34 ../somador_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                                0x10f (size before relaxing)
+ .debug_str     0x00000467       0x3b ../somador_bsp/\libhal_bsp.a(altera_nios2_qsys_irq.o)
+                                0x116 (size before relaxing)
+ .debug_str     0x000004a2       0xe9 c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+                                0x184 (size before relaxing)
+
+.debug_loc      0x00000000      0x11b
+ *(.debug_loc)
+ .debug_loc     0x00000000       0x1f obj/default/hello_world_small.o
+ .debug_loc     0x0000001f       0x1f ../somador_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_loc     0x0000003e       0x1f ../somador_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_loc     0x0000005d       0x48 ../somador_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_loc     0x000000a5       0x32 ../somador_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_loc     0x000000d7       0x26 ../somador_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_loc     0x000000fd       0x1e c:/altera/13.0sp1/nios2eds/bin/gnu/h-i686-mingw32/bin/../lib/gcc/nios2-elf/4.1.2/../../../../nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_alt_sim_info
+                0x00000000       0x10
+ *(.debug_alt_sim_info)
+ .debug_alt_sim_info
+                0x00000000       0x10 ../somador_bsp//obj/HAL/src/crt0.o
+                0x0000ce20                __alt_data_end = 0xce20
+                0x0000ce20                PROVIDE (__alt_stack_pointer, __alt_data_end)
+                0x000082b8                PROVIDE (__alt_stack_limit, __alt_stack_base)
+                0x000082b8                PROVIDE (__alt_heap_start, end)
+                0x0000ce20                PROVIDE (__alt_heap_limit, 0xce20)
+OUTPUT(somador.elf elf32-littlenios2)
+
+.debug_ranges   0x00000000       0x20
+ .debug_ranges  0x00000000       0x20 ../somador_bsp//obj/HAL/src/crt0.o

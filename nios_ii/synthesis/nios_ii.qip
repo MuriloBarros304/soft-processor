@@ -2,7 +2,7 @@ set_global_assignment -entity "nios_ii" -library "nios_ii" -name IP_TOOL_NAME "Q
 set_global_assignment -entity "nios_ii" -library "nios_ii" -name IP_TOOL_VERSION "13.0sp1"
 set_global_assignment -entity "nios_ii" -library "nios_ii" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "nios_ii" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../nios_ii.sopcinfo"]
-set_instance_assignment -entity "nios_ii" -library "nios_ii" -name SLD_INFO "QSYS_NAME nios_ii HAS_SOPCINFO 1 GENERATION_ID 1780755822"
+set_instance_assignment -entity "nios_ii" -library "nios_ii" -name SLD_INFO "QSYS_NAME nios_ii HAS_SOPCINFO 1 GENERATION_ID 1781019898"
 set_global_assignment -library "nios_ii" -name MISC_FILE [file join $::quartus(qip_path) "../../nios_ii.cmp"]
 set_global_assignment -name SYNTHESIS_ONLY_QIP ON
 set_global_assignment -library "nios_ii" -name MISC_FILE [file join $::quartus(qip_path) "../../nios_ii.qsys"]
@@ -39,7 +39,7 @@ set_global_assignment -library "nios_ii" -name SYSTEMVERILOG_FILE [file join $::
 set_global_assignment -library "nios_ii" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_master_agent.sv"]
 set_global_assignment -library "nios_ii" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_slave_translator.sv"]
 set_global_assignment -library "nios_ii" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_master_translator.sv"]
-set_global_assignment -library "nios_ii" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_ii_hex7.v"]
+set_global_assignment -library "nios_ii" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_ii_hex0.v"]
 set_global_assignment -library "nios_ii" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_ii_switches.v"]
 set_global_assignment -library "nios_ii" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_ii_leds.v"]
 set_global_assignment -library "nios_ii" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/nios_ii_sysid_qsys_0.v"]
@@ -108,9 +108,9 @@ set_global_assignment -entity "altera_merlin_slave_translator" -library "nios_ii
 set_global_assignment -entity "altera_merlin_master_translator" -library "nios_ii" -name IP_TOOL_NAME "altera_merlin_master_translator"
 set_global_assignment -entity "altera_merlin_master_translator" -library "nios_ii" -name IP_TOOL_VERSION "13.0"
 set_global_assignment -entity "altera_merlin_master_translator" -library "nios_ii" -name IP_TOOL_ENV "Qsys"
-set_global_assignment -entity "nios_ii_hex7" -library "nios_ii" -name IP_TOOL_NAME "altera_avalon_pio"
-set_global_assignment -entity "nios_ii_hex7" -library "nios_ii" -name IP_TOOL_VERSION "13.0.1.99.2"
-set_global_assignment -entity "nios_ii_hex7" -library "nios_ii" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "nios_ii_hex0" -library "nios_ii" -name IP_TOOL_NAME "altera_avalon_pio"
+set_global_assignment -entity "nios_ii_hex0" -library "nios_ii" -name IP_TOOL_VERSION "13.0.1.99.2"
+set_global_assignment -entity "nios_ii_hex0" -library "nios_ii" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -entity "nios_ii_switches" -library "nios_ii" -name IP_TOOL_NAME "altera_avalon_pio"
 set_global_assignment -entity "nios_ii_switches" -library "nios_ii" -name IP_TOOL_VERSION "13.0.1.99.2"
 set_global_assignment -entity "nios_ii_switches" -library "nios_ii" -name IP_TOOL_ENV "Qsys"

@@ -16,7 +16,7 @@
    {
       datum baseAddress
       {
-         value = "69688";
+         value = "69784";
          type = "String";
       }
    }
@@ -32,15 +32,63 @@
    {
       datum baseAddress
       {
-         value = "69680";
+         value = "69776";
          type = "String";
+      }
+   }
+   element hex0
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element hex1
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
+   element hex2
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+   element hex4
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element hex5
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element hex6
+   {
+      datum _sortIndex
+      {
+         value = "12";
+         type = "int";
       }
    }
    element hex7
    {
       datum _sortIndex
       {
-         value = "7";
+         value = "13";
          type = "int";
       }
    }
@@ -88,11 +136,11 @@
    {
       datum baseAddress
       {
-         value = "69664";
+         value = "69760";
          type = "String";
       }
    }
-   element hex7.s1
+   element hex6.s1
    {
       datum baseAddress
       {
@@ -100,11 +148,35 @@
          type = "String";
       }
    }
-   element switches.s1
+   element hex0.s1
+   {
+      datum baseAddress
+      {
+         value = "69744";
+         type = "String";
+      }
+   }
+   element hex4.s1
+   {
+      datum baseAddress
+      {
+         value = "69680";
+         type = "String";
+      }
+   }
+   element hex7.s1
    {
       datum baseAddress
       {
          value = "69632";
+         type = "String";
+      }
+   }
+   element hex2.s1
+   {
+      datum baseAddress
+      {
+         value = "69696";
          type = "String";
       }
    }
@@ -113,6 +185,30 @@
       datum baseAddress
       {
          value = "32768";
+         type = "String";
+      }
+   }
+   element switches.s1
+   {
+      datum baseAddress
+      {
+         value = "69728";
+         type = "String";
+      }
+   }
+   element hex5.s1
+   {
+      datum baseAddress
+      {
+         value = "69664";
+         type = "String";
+      }
+   }
+   element hex1.s1
+   {
+      datum baseAddress
+      {
+         value = "69712";
          type = "String";
       }
    }
@@ -135,19 +231,19 @@
 }
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
- <parameter name="device" value="EP2C35F672C6" />
+ <parameter name="device" value="Unknown" />
  <parameter name="deviceFamily" value="Cyclone II" />
- <parameter name="deviceSpeedGrade" value="6" />
+ <parameter name="deviceSpeedGrade" value="Unknown" />
  <parameter name="fabricMode" value="QSYS" />
  <parameter name="generateLegacySim" value="false" />
  <parameter name="generationId" value="0" />
  <parameter name="globalResetBus" value="false" />
  <parameter name="hdlLanguage" value="VERILOG" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="exemplo_nois.qpf" />
+ <parameter name="projectName" value="soft_processor.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1780754067483" />
+ <parameter name="timeStamp" value="1781019650159" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
@@ -158,13 +254,43 @@
    type="conduit"
    dir="end" />
  <interface
-   name="hex7_external_connection"
-   internal="hex7.external_connection"
+   name="hex0_external_connection"
+   internal="hex0.external_connection"
    type="conduit"
    dir="end" />
  <interface
    name="switches_external_connection"
    internal="switches.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="hex1_external_connection"
+   internal="hex1.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="hex2_external_connection"
+   internal="hex2.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="hex4_external_connection"
+   internal="hex4.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="hex5_external_connection"
+   internal="hex5.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="hex6_external_connection"
+   internal="hex6.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="hex7_external_connection"
+   internal="hex7.external_connection"
    type="conduit"
    dir="end" />
  <module kind="clock_source" version="13.0" enabled="1" name="clk_0">
@@ -279,7 +405,7 @@
   <parameter name="tightlyCoupledInstructionMaster2AddrWidth" value="1" />
   <parameter name="tightlyCoupledInstructionMaster3AddrWidth" value="1" />
   <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x8000' end='0xCE20' /><slave name='nios2_qsys_0.jtag_debug_module' start='0x10800' end='0x11000' /></address-map>]]></parameter>
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x8000' end='0xCE20' /><slave name='nios2_qsys_0.jtag_debug_module' start='0x10800' end='0x11000' /><slave name='switches.s1' start='0x11000' end='0x11010' /><slave name='hex7.s1' start='0x11010' end='0x11020' /><slave name='leds.s1' start='0x11020' end='0x11030' /><slave name='sysid_qsys_0.control_slave' start='0x11030' end='0x11038' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x11038' end='0x11040' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x8000' end='0xCE20' /><slave name='nios2_qsys_0.jtag_debug_module' start='0x10800' end='0x11000' /><slave name='hex7.s1' start='0x11000' end='0x11010' /><slave name='hex6.s1' start='0x11010' end='0x11020' /><slave name='hex5.s1' start='0x11020' end='0x11030' /><slave name='hex4.s1' start='0x11030' end='0x11040' /><slave name='hex2.s1' start='0x11040' end='0x11050' /><slave name='hex1.s1' start='0x11050' end='0x11060' /><slave name='switches.s1' start='0x11060' end='0x11070' /><slave name='hex0.s1' start='0x11070' end='0x11080' /><slave name='leds.s1' start='0x11080' end='0x11090' /><slave name='sysid_qsys_0.control_slave' start='0x11090' end='0x11098' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x11098' end='0x110A0' /></address-map>]]></parameter>
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="deviceFamilyName" value="Cyclone II" />
   <parameter name="internalIrqMaskSystemInfo" value="1" />
@@ -381,7 +507,115 @@
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="18" />
+  <parameter name="width" value="16" />
+  <parameter name="clockRate" value="50000000" />
+ </module>
+ <module
+   kind="altera_avalon_pio"
+   version="13.0.1.99.2"
+   enabled="1"
+   name="hex0">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="7" />
+  <parameter name="clockRate" value="50000000" />
+ </module>
+ <module
+   kind="altera_avalon_pio"
+   version="13.0.1.99.2"
+   enabled="1"
+   name="hex1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="7" />
+  <parameter name="clockRate" value="50000000" />
+ </module>
+ <module
+   kind="altera_avalon_pio"
+   version="13.0.1.99.2"
+   enabled="1"
+   name="hex2">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="7" />
+  <parameter name="clockRate" value="50000000" />
+ </module>
+ <module
+   kind="altera_avalon_pio"
+   version="13.0.1.99.2"
+   enabled="1"
+   name="hex4">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="7" />
+  <parameter name="clockRate" value="50000000" />
+ </module>
+ <module
+   kind="altera_avalon_pio"
+   version="13.0.1.99.2"
+   enabled="1"
+   name="hex5">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="7" />
+  <parameter name="clockRate" value="50000000" />
+ </module>
+ <module
+   kind="altera_avalon_pio"
+   version="13.0.1.99.2"
+   enabled="1"
+   name="hex6">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="7" />
   <parameter name="clockRate" value="50000000" />
  </module>
  <module
@@ -472,7 +706,7 @@
    start="nios2_qsys_0.data_master"
    end="jtag_uart_0.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011038" />
+  <parameter name="baseAddress" value="0x00011098" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -481,7 +715,7 @@
    start="nios2_qsys_0.data_master"
    end="sysid_qsys_0.control_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011030" />
+  <parameter name="baseAddress" value="0x00011090" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -490,7 +724,7 @@
    start="nios2_qsys_0.data_master"
    end="leds.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011020" />
+  <parameter name="baseAddress" value="0x00011080" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -521,16 +755,16 @@
    kind="reset"
    version="13.0"
    start="nios2_qsys_0.jtag_debug_module_reset"
-   end="hex7.reset" />
- <connection kind="clock" version="13.0" start="clk_0.clk" end="hex7.clk" />
+   end="hex0.reset" />
+ <connection kind="clock" version="13.0" start="clk_0.clk" end="hex0.clk" />
  <connection kind="clock" version="13.0" start="clk_0.clk" end="switches.clk" />
  <connection
    kind="avalon"
    version="13.0"
    start="nios2_qsys_0.data_master"
-   end="hex7.s1">
+   end="hex0.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011010" />
+  <parameter name="baseAddress" value="0x00011070" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -539,9 +773,99 @@
    start="nios2_qsys_0.data_master"
    end="switches.s1">
   <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011060" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="13.0"
+   start="nios2_qsys_0.data_master"
+   end="hex1.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011050" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="13.0"
+   start="nios2_qsys_0.data_master"
+   end="hex2.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011040" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection kind="clock" version="13.0" start="clk_0.clk" end="hex1.clk" />
+ <connection kind="clock" version="13.0" start="clk_0.clk" end="hex2.clk" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="nios2_qsys_0.jtag_debug_module_reset"
+   end="hex2.reset" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="nios2_qsys_0.jtag_debug_module_reset"
+   end="hex1.reset" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="nios2_qsys_0.jtag_debug_module_reset"
+   end="hex4.reset" />
+ <connection kind="clock" version="13.0" start="clk_0.clk" end="hex4.clk" />
+ <connection
+   kind="avalon"
+   version="13.0"
+   start="nios2_qsys_0.data_master"
+   end="hex4.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011030" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection kind="clock" version="13.0" start="clk_0.clk" end="hex5.clk" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="nios2_qsys_0.jtag_debug_module_reset"
+   end="hex5.reset" />
+ <connection
+   kind="avalon"
+   version="13.0"
+   start="nios2_qsys_0.data_master"
+   end="hex5.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011020" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="13.0"
+   start="nios2_qsys_0.data_master"
+   end="hex6.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00011010" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="13.0"
+   start="nios2_qsys_0.data_master"
+   end="hex7.s1">
+  <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00011000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
+ <connection
+   kind="reset"
+   version="13.0"
+   start="nios2_qsys_0.jtag_debug_module_reset"
+   end="hex7.reset" />
+ <connection kind="clock" version="13.0" start="clk_0.clk" end="hex7.clk" />
+ <connection kind="clock" version="13.0" start="clk_0.clk" end="hex6.clk" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="nios2_qsys_0.jtag_debug_module_reset"
+   end="hex6.reset" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
 </system>

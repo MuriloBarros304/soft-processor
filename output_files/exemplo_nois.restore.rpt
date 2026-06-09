@@ -1,5 +1,5 @@
 Restore Archived Project report for exemplo_nois
-Sat Jun  6 13:30:41 2026
+Mon Jun 08 10:23:10 2026
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Sat Jun  6 13:30:41 2026 ;
+; Restore Archived Project Status ; Successful - Mon Jun 08 10:23:10 2026 ;
 ; Revision Name                   ; exemplo_nois                          ;
 ; Top-level Entity Name           ; soft_nios                             ;
 ; Family                          ; Cyclone II                            ;
@@ -46,8 +46,14 @@ applicable agreement for further details.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored '/home/murilo/Desktop/projetos/soft-processor/nios/exemplo_nois_tmp_archive.qar' into the '/home/murilo/Desktop/projetos/soft-processor' directory
+Info: Successfully restored 'C:/Users/joao.silva.123/Documents/soft-processor/soft_processor.qar' into the 'C:/Users/joao.silva.123/Documents/soft-processor/' directory
 Info: Generated report 'exemplo_nois.restore.rpt'
+Info (23030): Evaluation of Tcl script c:/altera/13.0sp1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus II 32-bit Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 240 megabytes
+    Info: Processing ended: Mon Jun 08 10:23:10 2026
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 
 +-------------------------------------------------------------------------------+
@@ -57,7 +63,6 @@ Info: Generated report 'exemplo_nois.restore.rpt'
 +-------------------------------------------------------------------------------+
 ; assignment_defaults.qdf                                                       ;
 ; exemplo_nios.vhd                                                              ;
-; exemplo_nois.qpf                                                              ;
 ; exemplo_nois.qsf                                                              ;
 ; incremental_db/compiled_partitions/exemplo_nois.db_info                       ;
 ; nios_ii.cmp                                                                   ;
@@ -114,6 +119,7 @@ Info: Generated report 'exemplo_nois.restore.rpt'
 ; nios_ii/synthesis/submodules/nios_ii_switches.v                               ;
 ; nios_ii/synthesis/submodules/nios_ii_sysid_qsys_0.v                           ;
 ; soft_nios.vhd                                                                 ;
+; soft_processor.qpf                                                            ;
 +-------------------------------------------------------------------------------+
 
 
